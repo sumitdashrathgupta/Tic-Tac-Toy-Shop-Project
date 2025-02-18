@@ -1,0 +1,71 @@
+.main {
+    width: 80%;
+    height: 100%;
+    margin: 10% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.toy-image {
+    width: 120%;
+}
+
+.section-second {
+    width: 30%
+}
+
+.para-1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.para-2 {
+    font-size: 1.3em;
+}
+
+.page-btn {
+    margin: 5% 0;
+    padding: 10px 20px;
+}
+
+@media only screen and (max-width: 1280px) {
+    .toy-image {
+        width: 90%;
+    }
+
+    .section-second {
+        width: 60%
+    }
+    .main {
+        gap: 15px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .toy-image {
+        width: 100%;
+    }
+
+    .section-second {
+        width: 100%
+    }
+
+    .para-1 {
+        font-size: 1.6em;
+    }
+
+    .para-2 {
+        font-size: 1.1em;
+    }
+
+}
