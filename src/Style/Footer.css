@@ -1,0 +1,35 @@
+.footer {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(187, 187, 187);
+}
+
+.footer-section {
+    width: 80%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0px 20px;
+}
+
+.footer-card {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 30px 0px;
+
+    & a {
+        text-decoration: none;
+        margin: 3px 0px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .footer-section {
+        width: 90%;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
