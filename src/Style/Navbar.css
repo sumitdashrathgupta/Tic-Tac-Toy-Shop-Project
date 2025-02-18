@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Atkinson Hyperlegible Next", serif;
+}
+
+:root {
+    --btn1-color: rgb(91, 91, 255);
+    --btn2-color: rgb(255, 209, 124);
+    --text-color: rgb(27, 27, 27);
+    --full-background-color: rgba(128, 128, 128, 0.172);
+    --text-color-btn: #fff;
+    --text-size: 1.1rem;
+}
+
+body {
+    background: var(--full-background-color);
+}
+
+.nav-header {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(40deg, rgb(184, 221, 227), rgba(218, 168, 7, 0.471));
+}
+
+.navbar {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.logo {
+    width: 75px;
+}
+
+.logo-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & h1 {
+        font-family: "Atkinson Hyperlegible Next", serif;
+    }
+}
+
+.input-search {
+    width: 50%;
+    height: auto;
+    border: none;
+    padding: 5px;
+    outline: none;
+    font-size: var(--text-size);
+    border-radius: 5px;
+}
+
+.input-search:hover {
+    outline: 0.1px solid rgba(128, 128, 128, 0.312);
+}
+
+.aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.card-icon {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 5px 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: .2s linear;
+    background: var(--btn1-color);
+    color: var(--text-color-btn);
+    font-size: var(--text-size);
+    border-radius: 5px;
+
+}
+
+.btn:hover {
+    background: rgb(61, 61, 168);
+}
+
+.mr-icon {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .aside {
+        display: none;
+    }
+
+    .input-search {
+        display: none;
+    }
+
+    .navbar {
+        padding: 2px 0;
+    }
+
+    .logo-part {
+        position: relative;
+        right: 30px;
+
+        & .logo {
+            width: 60px;
+        }
+
+        & h1 {
+            font-size: 30px;
+        }
+    }
+
+    .mr-icon {
+        visibility: visible;
+        font-size: 21px;
+        font-weight: 600;
+    }
+}
