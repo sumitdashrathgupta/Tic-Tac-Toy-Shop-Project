@@ -1,154 +1,56 @@
-
-.orderpagediv{
-    display: flex;
-    width: 90%;
-    margin: 2px auto;
-    gap: 15px;
-    justify-content: space-evenly;
+:root {
+    --btn-add-color: rgb(91, 91, 255);
+    --btn-buy-color: rgb(255, 209, 124);
+    --btn-buy-text-color: black;
+    --text-btn-size: 13px;
 }
 
-.leftdiv{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* div1 css */
-.leftdiv .leftimgdiv img{
-    height: 400px;
-    width: 400px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-
-}
-
-/* div2 css */
-
-.leftbtndiv{
-    display: flex;
-    gap: 10px;
-}
-.leftbtndiv .btn1{
+.orderpagediv {
+    width: 80%;
+    margin: 5% auto;
     display: flex;
     align-items: center;
-    gap: 5px;
-    justify-content: center;
-    padding: 15px 30px;
-    background-color: rgb(255, 209, 124);
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.proimag {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.249);
+}
+
+.Probtn {
+    width: 45%;
+    font-size: 1.5em;
     border: none;
-    font-size: 17px;
-    
-}
-.leftbtndiv .btn2{
-    font-size: 17px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    justify-content: center;
-    padding: 15px 30px;
-    background-color: skyblue;
-    border: none;
-}
-.leftbtndiv .btn1 img{
-    height: 20px;
-}
-.leftbtndiv .btn2 img{
-    height: 20px;
-}
-
-
-/* right div */
-
-.rightdiv{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.rightdiv p{
-    font-size: 19px;
-    font-weight: 450;
-}
-
-.specialpricespan{
-    color: green;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: cursive;
-}
-
-.pricediv{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.pricesp{
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.prevPricesp{
-    color: gray;
-    text-decoration: line-through;
-    font-size: 18px;
-}
-
-.offpricesp{
-    color: green;
-    font-size: 17px;
-    font-weight: 450;
-   
-}
-
-.urgencyspan{
-    font-size: 15px;
-    color: rgb(252, 189, 72);
-    font-weight: bold;
-}
-
-.descriptiondiv{
-    display: flex;
-    align-items: start;
-    gap: 10px;
-}
-
-.descriptiondiv span{
-    font-size: 16px;
-    font-weight: 500;
-    color: gray;
-}
-
-.descriptiondiv p{
-    font-size: 14px;
-}
-
-/* features div */
-
-.featuresdiv{
-    display: flex;
-    align-items: start;
-    gap: 10px;
-}
-
-.featuresdiv span{
-    font-size: 16px;
-    font-weight: 500;
-    color: gray;
-}
-
-.featuresdiv p{
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-/* readmore */
-.readmorediv{
-    display: none;
-}
-
-.readmorespan{
-    color: rgb(91, 91, 255) !important;
-    font-size: 12px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 10px 10px;
+    padding: 10px;
     cursor: pointer;
+}
+
+.btn1 {
+    background: var(--btn-add-color);
+    color: white;
+}
+
+.btn1:hover {
+    background-color: rgb(63, 63, 163);
+}
+
+.btn2 {
+    background: var(--btn-buy-color);
+    color: var(--btn-buy-text-color);
+}
+
+.btn2:hover {
+    background-color: rgb(220, 183, 114);
+}
+
+.ProPara{
+    font-size: 2em;
+    color: var(--btn-buy-text-color);
+    font-weight: 600;
 }

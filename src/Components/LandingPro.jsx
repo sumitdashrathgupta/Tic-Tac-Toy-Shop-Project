@@ -4,7 +4,7 @@ import Flash from '../assets/Card image/flash.png'
 import Car from '../assets/Card image/car2.jpg'
 import '../Style/LandingPro.css'
 
-const LandingPro = () => {
+const LandingPro = (props) => {
     let [readState,setReadState] = useState(true);
     let readmdiv = useRef(null);
     let readmspan = useRef(null);
@@ -26,27 +26,21 @@ const LandingPro = () => {
         <>
             <div className='orderpagediv'>
                 <div className="leftdiv">
-                    {/* div1 */}
                     <div className="leftimgdiv">
-                        <img src={Car} alt="" />
+                        <img className='proimag' src={Car} alt="" />
                     </div>
-
-                    {/* div2 */}
                     <div className="leftbtndiv">
-                        <button className='btn1'>
-                            <img src={Cart} alt="" />
-                            <span>ADD TO CART</span>
+                        <button className='btn1 Probtn'>
+                           ADD TO CART
                         </button>
-
-                        <button className='btn2'>
-                            <img src={Flash} alt="" />
-                            <span>BUY NOW</span>
+                        <button className='btn2 Probtn'>
+                            BUY NOW
                         </button>
                     </div>
                 </div>
 
                 <div className="rightdiv">
-                    <p>Remote control car BMW car with 3 joined battery, Quick battery charger (Black Color car size-10 inch)</p>
+                    <p className='ProPara'>Remote control car BMW car with 3 joined battery, Quick battery charger (Black Color car size-10 inch)</p>
                     <span className='specialpricespan'>Special price</span>
                     <div className="pricediv">
                         <span className='pricespans pricesp'>₹300</span>

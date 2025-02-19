@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Style/Card.css"
+import { useNavigate } from "react-router-dom";
 
 const Products = (props) => {
+    const [Data, setData] = useState(null)
+    const Navigate = useNavigate()
 
     const DataShering = () => {
-
+        Navigate("LandingPro")
     }
 
     return (
