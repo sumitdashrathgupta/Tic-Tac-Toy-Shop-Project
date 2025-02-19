@@ -1,19 +1,19 @@
 .main {
     width: 80%;
     height: 100%;
-    margin: 10% auto;
+    margin: 7% auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 10px;
+    gap: 30px;
 }
 
 .toy-image {
-    width: 120%;
+    width: 100%;
 }
 
 .section-second {
-    width: 30%
+    width: 40%
 }
 
 .para-1 {
@@ -33,14 +33,16 @@
 
 @media only screen and (max-width: 1280px) {
     .toy-image {
-        width: 90%;
+        width: 100%;
     }
 
     .section-second {
-        width: 60%
+        width: 50%
     }
+
     .main {
-        gap: 15px;
+        margin: 11% auto;
+        gap: 50px;
     }
 }
 
