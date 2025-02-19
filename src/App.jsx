@@ -1,15 +1,18 @@
 import React from "react";
 import Navbar from "./Components/Navbar"
-import LandingPage from "./Components/Landing"
-import Products from "./Components/Products";
+import LandingPage from "./Components/LandingPage";
 import Footer from "./Components/Footer"
+import LandingPro from "./Components/LandingPro"
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
     return (
         <>
             <Navbar />
-            <LandingPage />
-            <Products />
+            <Routes>
+                <Route path="/" element={ <LandingPage />}/>
+                <Route path="/product" element={ <LandingPro />}/>
+            </Routes>
             <Footer />
         </>
     )
