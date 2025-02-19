@@ -12,12 +12,14 @@ const Products = (props) => {
 
     return (
         <>
-            <div className="card" onClick={DataShering}>
-                <img className="card-img-style" src={props.Image} alt="Car" />
-                <div className="control-data">
-                    <h2 className="toy-title">{props.Title}</h2>
-                    <p className="toy-reting">{props.Reting}</p>
-                    <p className="toy-price">₹ {props.Price}</p>
+            <div className="card">
+                <div className="card-i" onClick={DataShering}>
+                    <img className="card-img-style" src={props.Image} alt="Car" />
+                    <div className="control-data">
+                        <h2 className="toy-title">{props.Title}</h2>
+                        <p className="toy-reting">{props.Reting}</p>
+                        <p className="toy-price">₹ {props.Price}</p>
+                    </div>
                 </div>
                 <div className="btn-section">
                     <button type="button" className="btn-add">Add to Card</button>
