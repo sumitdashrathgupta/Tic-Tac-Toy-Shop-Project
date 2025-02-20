@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Components/Navbar"
 import LandingPage from "./Components/LandingPage";
 import Footer from "./Components/Footer"
-import LandingPro from "./Components/LandingPro"
+import Landing_Page_Display from "./Components/Landing_Page_Display"
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path="/" element={ <LandingPage />}/>
-                <Route path="/LandingPro" element={ <LandingPro />}/>
+                <Route path="/Landing_Page_Display" element={ <Landing_Page_Display />}/>
             </Routes>
             <Footer />
         </>

@@ -7,7 +7,7 @@ const Products = (props) => {
     const Navigate = useNavigate()
 
     const DataShering = () => {
-        Navigate("LandingPro")
+        Navigate("Landing_Page_Display")
     }
 
     return (

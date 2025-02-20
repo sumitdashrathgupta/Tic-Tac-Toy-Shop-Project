@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import Car from '../assets/Card image/car2.jpg'
 import '../Style/LandingPro.css'
 
-const LandingPro = (props) => {
+const Landing_Page_Display = (props) => {
     let [readState,setReadState] = useState(true);
     let readmdiv = useRef(null);
     let readmspan = useRef(null);
@@ -92,4 +92,4 @@ const LandingPro = (props) => {
     )
 }
 
-export default LandingPro
+export default Landing_Page_Display
