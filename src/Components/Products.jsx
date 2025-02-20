@@ -14,7 +14,7 @@ const Products = (props) => {
         <>
             <div className="card">
                 <div className="card-i" onClick={DataShering}>
-                    <img className="card-img-style" src={props.Image} alt="Car" />
+                    <img className="card-img-style" src={props.src} alt="Car" />
                     <div className="control-data">
                         <h2 className="toy-title">{props.Title}</h2>
                         <p className="toy-reting">{props.Reting}</p>

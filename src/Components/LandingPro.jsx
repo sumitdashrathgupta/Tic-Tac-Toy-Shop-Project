@@ -1,6 +1,4 @@
 import React, { useRef, useState } from 'react'
-import Cart from '../assets/Card image/cart.png'
-import Flash from '../assets/Card image/flash.png'
 import Car from '../assets/Card image/car2.jpg'
 import '../Style/LandingPro.css'
 
