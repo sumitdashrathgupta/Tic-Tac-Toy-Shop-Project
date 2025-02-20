@@ -1,23 +1,24 @@
 import React, { useRef, useState } from 'react'
+// import ProductID from "../Pages/ProductID"
 import Car from '../assets/Card image/car2.jpg'
 import '../Style/LandingPro.css'
 
 const Landing_Page_Display = (props) => {
-    let [readState,setReadState] = useState(true);
+    let [readState, setReadState] = useState(true);
     let readmdiv = useRef(null);
     let readmspan = useRef(null);
-    const handleReadMore = ()=>{
-        if(readState){
+    const handleReadMore = () => {
+        if (readState) {
             readmdiv.current.style.display = "block";
             readmspan.current.textContent = 'Showless...'
             setReadState(false);
         }
-        else{
+        else {
             readmdiv.current.style.display = "none";
             readmspan.current.textContent = 'Readmore...'
             setReadState(true);
         }
-       
+
     }
 
     return (
@@ -29,7 +30,7 @@ const Landing_Page_Display = (props) => {
                     </div>
                     <div className="leftbtndiv">
                         <button className='btn1 Probtn'>
-                           ADD TO CART
+                            ADD TO CART
                         </button>
                         <button className='btn2 Probtn'>
                             BUY NOW
@@ -69,7 +70,7 @@ const Landing_Page_Display = (props) => {
                             <span>Premium Build Quality:</span>
                             <p> Made with a steel body for durability and long-lasting use.
                                 Available in multiple colors for personalization.</p>
-                            
+
                             <div className="readmorediv" ref={readmdiv}>
                                 <span>Attractive & Realistic Design:</span>
                                 <p>BMW-inspired sports car look with a sleek aerodynamic design.
@@ -87,7 +88,7 @@ const Landing_Page_Display = (props) => {
                     </div>
                 </div>
             </div>
-          
+            
         </>
     )
 }

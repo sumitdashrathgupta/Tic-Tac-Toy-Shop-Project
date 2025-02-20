@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Style/Card.css"
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Products = (props) => {
-    const [Data, setData] = useState(null)
+    const { ProductID } = useParams()
     const Navigate = useNavigate()
-
     const DataShering = () => {
-        Navigate("Landing_Page_Display")
+        Navigate(`Landing_Page_Display ${ProductID}`)
     }
 
     return (
         <>
             <div className="card">
-                <div className="card-i" onClick={DataShering}>
-                    <img className="card-img-style" src={props.src} alt="Car" />
+                <div className="card-i" >
+                    <img className="card-img-style" src={props.src} alt="Car" onClick={DataShering} />
                     <div className="control-data">
                         <h2 className="toy-title">{props.Title}</h2>
                         <p className="toy-reting">{props.Reting}</p>
