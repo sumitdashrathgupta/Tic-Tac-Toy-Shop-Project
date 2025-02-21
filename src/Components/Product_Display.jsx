@@ -40,6 +40,7 @@ const Product_Display = () => {
 
                 <div className="rightdiv">
                     <p className='ProPara'>{Products_Item[ProductId].Title}</p>
+                    <span>{Products_Item[ProductId].Reting()}</span>
                     <span className='specialpricespan'>Special price</span>
                     <div className="pricediv">
                         <span className='pricespans pricesp'>₹{" "}{Products_Item[ProductId].Price}</span>

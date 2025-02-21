@@ -167,7 +167,7 @@
     }
 
     .leftbtndiv {
-        margin-top:2%;
+        margin-top: 2%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -187,4 +187,7 @@
         border: none;
     }
 
+    .readmorespan {
+        color: blue;
+    }
 }
