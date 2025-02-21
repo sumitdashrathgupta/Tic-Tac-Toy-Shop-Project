@@ -2,8 +2,11 @@ import React, { useRef, useState } from 'react'
 // import ProductID from "../Pages/ProductID"
 import Car from '../assets/Card image/car2.jpg'
 import '../Style/LandingPro.css'
+import Products_Item from '../assets/Products_Item'
+import { useParams } from 'react-router-dom'
 
 const Landing_Page_Display = (props) => {
+    let {ProductId} = useParams();
     let [readState, setReadState] = useState(true);
     let readmdiv = useRef(null);
     let readmspan = useRef(null);
@@ -26,7 +29,7 @@ const Landing_Page_Display = (props) => {
             <div className='orderpagediv'>
                 <div className="leftdiv">
                     <div className="leftimgdiv">
-                        <img className='proimag' src={Car} alt="" />
+                        <img className='proimag' src={Products_Item[ProductId].Image} alt="" />
                     </div>
                     <div className="leftbtndiv">
                         <button className='btn1 Probtn'>
@@ -39,49 +42,43 @@ const Landing_Page_Display = (props) => {
                 </div>
 
                 <div className="rightdiv">
-                    <p className='ProPara'>Remote control car BMW car with 3 joined battery, Quick battery charger (Black Color car size-10 inch)</p>
+                    <p className='ProPara'>{Products_Item[ProductId].Title}</p>
                     <span className='specialpricespan'>Special price</span>
                     <div className="pricediv">
-                        <span className='pricespans pricesp'>₹300</span>
-                        <span className='pricespans prevPricesp'>₹999</span>
-                        <span className='pricespans offpricesp'>70% off</span>
+                        <span className='pricespans pricesp'>{Products_Item[ProductId].Price}</span>
+                        <span className='pricespans prevPricesp'>{Products_Item[ProductId].PreviousPrice}</span>
+                        <span className='pricespans offpricesp'>{Products_Item[ProductId].PercentOff}</span>
                     </div>
                     <span className='urgencyspan'>Hurry, Only 3 left!</span>
                     <div className='descriptiondiv'>
                         <span>Description:</span>
-                        <p>Now in this generation handling kids is a most headache thing and engaging kids with the remote control cars is an ideal choice. Bringing Remote control car at your home makes your kid feel good and engaged and also it has húge battery capacity which makes your kid engaged for more than 3 hours per charge , With different colors varient, Steel body and in this low cost make it different from the other car seller from market.</p>
+                        <p>{Products_Item[ProductId].Description}</p>
                     </div>
 
                     <div className="featuresdiv">
                         <span>Features: </span>
                         <div>
-                            <span>High-Capacity Battery:</span>
-                            <p>Comes with a 3-joined battery setup for extended playtime.
-                                Provides 3+ hours of continuous runtime per charge.
-                                Fast Charging:
+                            <span>{Products_Item[ProductId].Features[0].title}</span>
+                            <p>{Products_Item[ProductId].Features[0].details}
                             </p>
 
-                            <span>Remote Control Functionality:</span>
+                            <span>{Products_Item[ProductId].Features[1].title}</span>
                             <p>
-                                2.4 GHz remote control for smooth and long-range operation.
-                                Supports multi-directional movement (forward, backward, left, right).
+                                {Products_Item[ProductId].Features[1].details}
                             </p>
 
-                            <span>Premium Build Quality:</span>
-                            <p> Made with a steel body for durability and long-lasting use.
-                                Available in multiple colors for personalization.</p>
+                            <span>{Products_Item[ProductId].Features[2].title}</span>
+                            <p>{Products_Item[ProductId].Features[2].details}</p>
 
                             <div className="readmorediv" ref={readmdiv}>
-                                <span>Attractive & Realistic Design:</span>
-                                <p>BMW-inspired sports car look with a sleek aerodynamic design.
-                                    10-inch size, making it compact yet powerful.</p>
+                                <span>{Products_Item[ProductId].Features[3].title}</span>
+                                <p>{Products_Item[ProductId].Features[3].details}</p>
 
-                                <span>Perfect for Kids & Adults:</span>
-                                <p>Helps in hand-eye coordination and motor skill development.
-                                    Ideal for kids and RC car enthusiasts.</p>
+                                <span>{Products_Item[ProductId].Features[4].title}</span>
+                                <p>{Products_Item[ProductId].Features[4].details}</p>
 
-                                <span>Limited Stock Alert:</span>
-                                <p>Hurry! Only 3 left in stock.</p>
+                                <span>{Products_Item[ProductId].Features[5].title}</span>
+                                <p>{Products_Item[ProductId].Features[5].details}</p>
                             </div>
                             <span className='readmorespan' onClick={handleReadMore} ref={readmspan}>Readmore...</span>
                         </div>

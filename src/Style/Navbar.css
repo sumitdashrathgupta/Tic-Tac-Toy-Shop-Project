@@ -133,3 +133,10 @@ body {
         font-weight: 600;
     }
 }
+
+/* cart */
+.cartspan{
+    position: relative;
+    left: -47px;
+    top: -21px;
+}
