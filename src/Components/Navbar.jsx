@@ -12,7 +12,10 @@ const Navbar = () => {
     let navigate = useNavigate();
     const handleCartClick = ()=>{
         navigate('/cart')
-    }
+    };
+    const handleLoginClick = () => {
+        navigate("/Login");
+      };
 
     return (
         <>
@@ -24,9 +27,11 @@ const Navbar = () => {
                     </div>
                     <input className="input-search" type="search" placeholder="Search the Toy" />
                     <div className="aside">
-                        <FaShoppingCart className="card-icon" onClick={handleCartClick}/>
+                     <FaShoppingCart className="card-icon" onClick={handleCartClick} />
                         <span className="cartspan">{cartval}</span>
-                        <button className="btn" type="button">Login</button>
+                         <button className="btn" type="button" onClick={handleLoginClick}>
+                          Login
+                         </button>
                     </div>
                     <div className="mr-icon">
                     <TbBaselineDensitySmall />

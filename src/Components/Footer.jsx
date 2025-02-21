@@ -6,7 +6,7 @@ const Footer = () => {
         <>
             <footer className="footer">
                 <div className="footer-section">
-                    <div class="footer-card">
+                    <div className="footer-card">
                         <h3>About</h3>
                         <a href="">Contact Us</a>
                         <a href="">About Us</a>
@@ -14,7 +14,7 @@ const Footer = () => {
                         <a href="">TTT Stories</a>
                         <a href="">Corporate Inforamtion</a>
                     </div>
-                    <div class="footer-card">
+                    <div className="footer-card">
                         <h3>Group Companies</h3>
                         <a href="">Myntra</a>
                         <a href="">TTT Wholesale</a>
@@ -23,7 +23,7 @@ const Footer = () => {
                         <a href="">Corporate Inforamtion</a>
 
                     </div>
-                    <div class="footer-card">
+                    <div className="footer-card">
                         <h3>Help</h3>
                         <a href="">Payments</a>
                         <a href="">Shipping</a>
@@ -32,7 +32,7 @@ const Footer = () => {
                         <a href="">FReport Infringement</a>
 
                     </div>
-                    <div class="footer-card">
+                    <div className="footer-card">
                         <h3>Consumer Policy</h3>
                         <a href="">Cancellation & Returns</a>
                         <a href="">Terms Of Use</a>

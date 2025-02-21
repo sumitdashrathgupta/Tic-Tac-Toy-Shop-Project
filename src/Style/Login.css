@@ -1,0 +1,71 @@
+/* src/Style/Login.css */
+
+/* Center the login container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Full height of the viewport */
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 10px;
+  }
+  
+  /* Style the login form */
+  .login-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333; /* Dark gray text */
+  }
+  
+  .login-container form {
+    background-color: #fff; /* White background */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 400px; /* Limit form width */
+  }
+  
+  /* Style form groups (label + input) */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555; /* Medium gray text */
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .form-group input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow */
+  }
+  
+  /* Style the login button */
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
