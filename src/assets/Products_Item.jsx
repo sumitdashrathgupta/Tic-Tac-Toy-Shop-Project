@@ -14,10 +14,10 @@ const Products_Item = [
     {
         id: 1,
         Image: Car1,
-        Title2: 'Blue Robot Lambo...',
+        Title2: 'Robot Lambo',
         Title: "Blue Transformer Lamborghini remote control car With Steel Body and Amazing look",
-        Reting: () => (<><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><CiStar /></>),
         Price: "999",
+        Reting: () => (<><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><CiStar /></>),
         PreviousPrice: '1499',
         PercentOff: '33%',
         Description: "This sleek Blue Robot Lamborghini transforms into a robot and comes with a stylish steel body. Perfect for racing and display, it features powerful remote control and long-lasting durability.",
@@ -33,7 +33,7 @@ const Products_Item = [
     {
         id: 2,
         Image: Car2,
-        Title2: 'Yellow Color Mc laren...',
+        Title2: 'Mc laren',
         Title: "Yellow McLaren remote control car with stunning aerodynamic design and smooth control",
         Reting: () => (<><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><CiStar /><CiStar /></>),
         Price: "899",
@@ -52,7 +52,7 @@ const Products_Item = [
     {
         id: 3,
         Image: Car3,
-        Title2: 'Mc Laren with osm design...',
+        Title2: 'osm design',
         Title: "Green and Yellow McLaren remote control car with awesome design and powerful engine",
         Reting: () => (<><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /></>),
         Price: "799",
@@ -71,7 +71,7 @@ const Products_Item = [
     {
         id: 4,
         Image: Car4,
-        Title2: 'Remote Control Monster Truck...',
+        Title2: 'Monster Truck',
         Title: "Rugged Monster Truck with Off-Road Tires and Durable Build",
         Reting: () => (<><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><CiStar /><CiStar /></>),
         Price: "899",
@@ -90,7 +90,7 @@ const Products_Item = [
     {
         id: 5,
         Image: Car5,
-        Title2: 'Red Monster Racer...',
+        Title2: 'Monster Racer',
         Title: "Red Monster Racer with Powerful Motor and Sturdy Frame",
         Reting: () => (<><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><CiStar /></>),
         Price: "849",
@@ -109,7 +109,7 @@ const Products_Item = [
     {
         id: 6,
         Image: Car6,
-        Title2: 'Red Transformer Car...',
+        Title2: 'Transformer Car',
         Title: "Red Transformer Car with Robot Mode and Advanced Controls",
         Reting: () => (<><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><CiStar /><CiStar /></>),
         Price: "999",
@@ -128,7 +128,7 @@ const Products_Item = [
     {
         id: 7,
         Image: Car7,
-        Title2: 'Blue Off-Road Jeep...',
+        Title2: 'Off-Road Jeep',
         Title: "Blue Off-Road Jeep with Rugged Build and All-Terrain Capabilities",
         Reting: () => (<><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><CiStar /></>),
         Price: "899",
@@ -147,7 +147,7 @@ const Products_Item = [
     {
         id: 8,
         Image: Car8,
-        Title2: 'Green Stunt Car...',
+        Title2: 'Stunt Car',
         Title: "Green Stunt Car with 360° Spins and Flashing Lights",
         Reting: () => (<><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><CiStar /><CiStar /></>),
         Price: "749",

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import '../Style/LandingPro.css'
+import '../Style/Product_Display.css'
 import Products_Item from '../assets/Products_Item'
 import { useParams } from 'react-router-dom'
 
@@ -83,7 +83,6 @@ const Product_Display = () => {
                     </div>
                 </div>
             </div>
-            
         </>
     )
 }
