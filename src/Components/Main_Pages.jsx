@@ -4,7 +4,7 @@ import "../Style/Card.css"
 import Products from "./Products";
 import Products_Item from "../assets/Products_Item"
 
-const LandingPage = () => {
+const Main_Pages = () => {
     return (
         <>
             <Landingmain />
@@ -20,4 +20,4 @@ const LandingPage = () => {
 }
 
 
-export default LandingPage
+export default Main_Pages

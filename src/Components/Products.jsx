@@ -1,14 +1,13 @@
 import React from "react";
 import "../Style/Card.css"
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/Slice";
 
 const Products = (props) => {
-    const { ProductID } = useParams()
     const Navigate = useNavigate()
     const DataShering = () => {
-        Navigate(`Landing_Page_Display/${props.id-1}`)
+        Navigate(`Product_Display/${props.id-1}`)
     }
 
     const dispatch = useDispatch();

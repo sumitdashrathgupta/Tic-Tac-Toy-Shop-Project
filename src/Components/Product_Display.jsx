@@ -1,11 +1,9 @@
 import React, { useRef, useState } from 'react'
-// import ProductID from "../Pages/ProductID"
-import Car from '../assets/Card image/car2.jpg'
 import '../Style/LandingPro.css'
 import Products_Item from '../assets/Products_Item'
 import { useParams } from 'react-router-dom'
 
-const Landing_Page_Display = (props) => {
+const Product_Display = () => {
     let {ProductId} = useParams();
     let [readState, setReadState] = useState(true);
     let readmdiv = useRef(null);
@@ -90,4 +88,4 @@ const Landing_Page_Display = (props) => {
     )
 }
 
-export default Landing_Page_Display
+export default Product_Display

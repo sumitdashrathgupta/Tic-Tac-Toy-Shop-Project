@@ -1,9 +1,8 @@
 import React from "react";
 import Navbar from "./Components/Navbar"
-import LandingPage from "./Components/LandingPage";
+import Main_Pages from "./Components/Main_Pages";
 import Footer from "./Components/Footer"
-import ProductID from "./Pages/ProductID"
-import Landing_Page_Display from "./Components/Landing_Page_Display"
+import Product_Display from "./Components/Product_Display"
 import { Route, Routes } from "react-router-dom";
 import Cart from "./Components/Cart";
 
@@ -12,10 +11,8 @@ const App = () => {
         <>
             <Navbar/>
             <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/Landing_Page_Display/:ProductId" element={<Landing_Page_Display />}/>
-                    {/* <Route path=":ProductID" element={<ProductID/>}/>
-                </Route> */}
+                <Route path="/" element={<Main_Pages />} />
+                <Route path="/Product_Display/:ProductId" element={<Product_Display />}/>
                 <Route path="/cart" element={<Cart/>}/>
             </Routes>
             <Footer />
