@@ -7,18 +7,23 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 
-const Navbar = () => {
+const Navbar = (props) => {
     let cartval = useSelector((state) => state.cart.cartCount);
+    let Navigatelogo = useNavigate();
     let Navigate = useNavigate();
     const handleCartClick = () => {
         Navigate(`cart/${props.id - 1}`);
+    }
+
+    const handlelogo = () => {
+        Navigatelogo('/')
     }
 
     return (
         <>
             <header className="nav-header">
                 <div className="navbar">
-                    <div className="logo-part">
+                    <div className="logo-part" onClick={handlelogo}>
                         <img className="logo" src={Logo} alt="logo" />
                         <h1>Tic Tac Toy</h1>
                     </div>

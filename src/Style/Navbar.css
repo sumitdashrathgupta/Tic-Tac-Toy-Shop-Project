@@ -47,7 +47,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    cursor: pointer;
+    
     & h1 {
         font-family: "Atkinson Hyperlegible Next", serif;
     }
