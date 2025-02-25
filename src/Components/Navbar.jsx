@@ -8,10 +8,10 @@ import { useNavigate } from "react-router-dom";
 
 
 const Navbar = () => {
-    let cartval = useSelector((state)=>state.cart.count)
-    let navigate = useNavigate();
-    const handleCartClick = ()=>{
-        navigate('/cart')
+    let cartval = useSelector((state) => state.cart.cartCount);
+    let Navigate = useNavigate();
+    const handleCartClick = () => {
+        Navigate(`cart/${props.id - 1}`);
     }
 
     return (
@@ -24,12 +24,12 @@ const Navbar = () => {
                     </div>
                     <input className="input-search" type="search" placeholder="Search the Toy" />
                     <div className="aside">
-                        <FaShoppingCart className="card-icon" onClick={handleCartClick}/>
+                        <FaShoppingCart className="card-icon" onClick={handleCartClick} />
                         <span className="cartspan">{cartval}</span>
                         <button className="btn" type="button">Login</button>
                     </div>
                     <div className="mr-icon">
-                    <TbBaselineDensitySmall />
+                        <TbBaselineDensitySmall />
                     </div>
                 </div>
             </header>

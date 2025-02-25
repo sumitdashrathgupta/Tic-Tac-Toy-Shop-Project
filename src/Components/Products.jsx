@@ -10,6 +10,18 @@ const Products = (props) => {
         Navigate(`Product_Display/${props.id - 1}`)
     }
 
+    const handleCart = () => {
+        dispatch(addToCart({
+            id: props.id,
+            title: props.Title,
+            price: props.Price,
+            image: props.src,
+            rating: props.Reting
+        }));
+        Navigate(`cart/${props.id - 1}`);
+    };
+    
+
     const dispatch = useDispatch();
 
     return (
@@ -24,7 +36,7 @@ const Products = (props) => {
                     </div>
                 </div>
                 <div className="btn-section">
-                    <button type="button" className="btn-add" onClick={() => dispatch(addToCart())}>Add to Card</button>
+                    <button type="button" className="btn-add" onClick={handleCart}>Add to Card</button>
                     <button type="button" className="btn-buy">Buy Now</button>
                 </div>
             </div>
