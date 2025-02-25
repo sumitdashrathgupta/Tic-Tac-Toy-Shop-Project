@@ -79,6 +79,7 @@ const Cart = () => {
           <div key={index} className="cart-item">
             <img className='cart-img' src={item.Image} alt={item.Title} width="150" />
             <div className="cart-contenar">
+              <h3 className='cart1-title'>{item.Title2}</h3>
               <h3 className='cart-title'>{item.Title}</h3>
               <p className='cart'><span>Price : ₹</span>{item.Price}</p>
               <p className='cart'><span>Quantity :</span> {item.quantity}</p>
