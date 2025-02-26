@@ -1,0 +1,133 @@
+.cart-item {
+    width: 70%;
+    height: 100%;
+    margin: 2% auto;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    background: linear-gradient(40deg, rgb(166 165 161), rgb(248 248 248), rgb(166 165 161));
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+
+.cart-item:hover {
+    transform: scale(1.02);
+}
+
+.cart-contenar {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 2%;
+}
+
+.cart-img {
+    border-radius: 20px;
+}
+
+.cart-title {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.cart {
+    font-size: 1.1em;
+
+    & span {
+        font-weight: 600;
+    }
+}
+
+.cart-all-btn {
+    margin-top: 1%;
+}
+
+.cart-btn {
+    margin: 0 5px;
+    padding: 3px 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    outline: 0.1px solid rgba(0, 0, 0, 0.412);
+    border-radius: 5px;
+}
+
+.cart-btn:hover {
+    background-color: rgba(0, 0, 0, 0.332);
+    color: white;
+}
+
+.cart1-title {
+    display: none;
+}
+
+.cart-empty {
+    color: red;
+    width: 70%;
+    height: 83vh;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 2% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(81deg, rgb(244, 217, 217), rgb(13 29 94 / 30%), rgb(255 62 62 / 27%));
+}
+
+@media only screen and (max-width: 1280px) {
+    .cart-title {
+        width: 100%;
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+
+    .cart {
+        font-size: 15px;
+
+        & span {
+            font-weight: 600;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .cart-item {
+        width: 90%;
+        height: 100%;
+        margin: 2% auto;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        background: linear-gradient(40deg, rgb(166 165 161), rgb(248 248 248), rgb(166 165 161));
+        border-radius: 20px;
+        padding: 10px;
+        transition: 0.2s linear;
+        cursor: pointer;
+    }
+
+    .cart-title {
+        display: none;
+    }
+
+    .cart1-title {
+        display: block;
+    }
+
+    .cart-contenar {
+        margin: 0 3%;
+    }
+
+    .cart-img {
+        width: 40%;
+        border-radius: 20px;
+    }
+
+    .cart-empty {
+        width: 90%;
+        height: 89vh;
+    }
+}

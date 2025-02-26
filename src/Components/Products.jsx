@@ -1,15 +1,27 @@
 import React from "react";
 import "../Style/Card.css"
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/Slice";
+import Product_Display from "./Product_Display";
 
 const Products = (props) => {
-    const { ProductID } = useParams()
     const Navigate = useNavigate()
     const DataShering = () => {
-        Navigate(`Landing_Page_Display/${props.id-1}`)
+        Navigate(`Product_Display/${props.id - 1}`)
     }
+
+    const handleCart = () => {
+        dispatch(addToCart({
+            id: props.id,
+            title: props.Title,
+            price: props.Price,
+            image: props.src,
+            rating: props.Reting,
+        }));
+        Navigate(`/cart/${props.id - 1}`); 
+    };
+    
 
     const dispatch = useDispatch();
 
@@ -25,7 +37,7 @@ const Products = (props) => {
                     </div>
                 </div>
                 <div className="btn-section">
-                    <button type="button" className="btn-add" onClick={()=>dispatch(addToCart())}>Add to Card</button>
+                    <button type="button" className="btn-add" onClick={handleCart}>Add to Card</button>
                     <button type="button" className="btn-buy">Buy Now</button>
                 </div>
             </div>

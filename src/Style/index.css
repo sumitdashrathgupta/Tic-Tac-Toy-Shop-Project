@@ -32,6 +32,10 @@
 }
 
 @media only screen and (max-width: 1280px) {
+
+    .toy-title{
+font-size: 22px;
+    }
     .toy-image {
         width: 100%;
     }

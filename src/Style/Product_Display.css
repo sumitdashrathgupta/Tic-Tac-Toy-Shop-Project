@@ -1,0 +1,194 @@
+:root {
+    --btn-add-color: rgb(91, 91, 255);
+    --btn-buy-color: rgb(255, 209, 124);
+    --btn-buy-text-color: black;
+    --text-btn-size: 13px;
+}
+
+
+.orderpagediv {
+    width: 80%;
+    height: 70vh;
+    margin: 5% auto;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.proimag {
+    width: 400px;
+    border-radius: 30px;
+}
+
+
+
+.leftbtndiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Probtn {
+    padding: 10px 25px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: .2s linear;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 45%;
+    margin: 2% 0;
+    border: none;
+}
+
+.btn1p {
+    margin-right: 30px;
+    background-color: var(--btn-add-color);
+    color: var(--text-color-btn);
+}
+
+.btn1p:hover {
+    background-color: rgb(63, 63, 163);
+}
+
+.btn2p {
+    background-color: var(--btn-buy-color);
+    color: var(--btn-buy-text-color);
+}
+
+.btn2p:hover {
+    background-color: rgb(220, 183, 114);
+}
+
+
+.rightdiv {
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ProPara {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.specialpricespan {
+    color: green;
+    font-size: 15px;
+    margin-bottom: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.pricediv {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.pricespans {
+    margin-right: 10px;
+}
+
+.prevPricesp {
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.offpricesp {
+    font-size: 13px;
+    color: rgb(52, 9, 243);
+
+}
+
+.urgencyspan {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: red;
+    font-weight: 600;
+}
+
+.descriptiondiv {
+    margin-bottom: 20px;
+
+    & span {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+    }
+
+    & .paradis {
+        font-size: 15px;
+        color: rgba(5, 5, 5, 0.671);
+    }
+}
+
+.featuresdiv {
+    margin-bottom: 15px;
+
+    & .main-span {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+    }
+
+    & span {
+        padding-bottom: 10px;
+        font-size: 1.01em;
+        font-weight: 600;
+    }
+
+    & .paradis {
+        font-size: 15px;
+        color: rgba(5, 5, 5, 0.671);
+    }
+
+    & .readmorespan {
+        color: blue;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .orderpagediv {
+        width: 80%;
+        margin: 15% auto;
+        display: flex;
+        align-items: start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .proimag {
+        width: 300px;
+        border-radius: 30px;
+    }
+
+    .leftbtndiv {
+        margin-top: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .Probtn {
+        padding: 10px 25px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        transition: .2s linear;
+        font-size: 16px;
+        border-radius: 10px;
+        width: 80%;
+        margin: 2% 0;
+        border: none;
+    }
+
+    .readmorespan {
+        color: blue;
+    }
+}
