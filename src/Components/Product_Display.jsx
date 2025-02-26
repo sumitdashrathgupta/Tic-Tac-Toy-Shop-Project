@@ -2,14 +2,21 @@ import React, { useRef, useState, useEffect } from 'react';
 import '../Style/Product_Display.css';
 import Products_Item from '../assets/Products_Item';
 import { useParams } from 'react-router-dom';
+import { addToCart } from '../redux/Slice';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
-const Product_Display = () => {
+const Product_Display = (props) => {
     let { ProductId } = useParams();
     let [readState, setReadState] = useState(true);
     let readmdiv = useRef(null);
     let readmspan = useRef(null);
+    let Navigate = useNavigate();
+    let dispatch = useDispatch();
+
 
     //!Scroll to top when component loads
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -26,6 +33,18 @@ const Product_Display = () => {
         }
     };
 
+    const handleAddToCart = () => {
+        dispatch(
+            addToCart({
+                id: Products_Item[ProductId].id,
+                title: Products_Item[ProductId].Title,
+                price: Products_Item[ProductId].Price,
+                image: Products_Item[ProductId].Image,
+                rating: Products_Item[ProductId].Reting,
+            })
+        );
+        Navigate(`/cart/${Products_Item[ProductId].id - 1}`); 
+    };
     return (
         <div className='orderpagediv'>
             <div className="leftdiv">
@@ -33,6 +52,7 @@ const Product_Display = () => {
                     <img className='proimag' src={Products_Item[ProductId].Image} alt="" />
                 </div>
                 <div className="leftbtndiv">
+                    <button className='btn1p Probtn' onClick={handleAddToCart}>ADD TO CART</button>
                     <button className='btn1p Probtn'>ADD TO CART</button>
                     <button className='btn2p Probtn'>BUY NOW</button>
                 </div>

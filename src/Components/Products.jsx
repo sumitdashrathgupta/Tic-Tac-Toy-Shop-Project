@@ -3,6 +3,7 @@ import "../Style/Card.css"
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/Slice";
+import Product_Display from "./Product_Display";
 
 const Products = (props) => {
     const Navigate = useNavigate()
@@ -16,6 +17,9 @@ const Products = (props) => {
             title: props.Title,
             price: props.Price,
             image: props.src,
+            rating: props.Reting,
+        }));
+        Navigate(`/cart/${props.id - 1}`); 
             rating: props.Reting
         }));
         Navigate(`cart/${props.id - 1}`);
