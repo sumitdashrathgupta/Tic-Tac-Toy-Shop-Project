@@ -97,7 +97,9 @@ body {
     background: rgb(61, 61, 168);
 }
 
-.mr-icon {
+/* HamburgurBtn CSS ----------- */
+
+.hamburgerBtn {
     visibility: hidden;
 }
 
@@ -128,7 +130,7 @@ body {
         }
     }
 
-    .mr-icon {
+    .hamburgerBtn {
         visibility: visible;
         font-size: 21px;
         font-weight: 600;
@@ -140,4 +142,57 @@ body {
     position: relative;
     left: -47px;
     top: -21px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #868383;
+  color: white;
+  padding-top: 60px;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li {
+  padding: 15px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #333;
+}
+
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Hamburger Button */
+.hamburgerBtn {
+  font-size: 24px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  margin-left: 20px;
 }
