@@ -53,7 +53,6 @@ const Product_Display = (props) => {
                 </div>
                 <div className="leftbtndiv">
                     <button className='btn1p Probtn' onClick={handleAddToCart}>ADD TO CART</button>
-                    <button className='btn1p Probtn'>ADD TO CART</button>
                     <button className='btn2p Probtn'>BUY NOW</button>
                 </div>
             </div>

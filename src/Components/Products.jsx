@@ -20,9 +20,6 @@ const Products = (props) => {
             rating: props.Reting,
         }));
         Navigate(`/cart/${props.id - 1}`); 
-            rating: props.Reting
-        }));
-        Navigate(`cart/${props.id - 1}`);
     };
     
 
