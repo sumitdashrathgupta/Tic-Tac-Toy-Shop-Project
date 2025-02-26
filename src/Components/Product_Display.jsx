@@ -14,6 +14,9 @@ const Product_Display = (props) => {
     let Navigate = useNavigate();
     let dispatch = useDispatch();
 
+
+    //!Scroll to top when component loads
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -42,21 +45,6 @@ const Product_Display = (props) => {
         );
         Navigate(`/cart/${Products_Item[ProductId].id - 1}`); 
     };
-       
-    // const handleProductClick = () => {
-    //     dispatch(
-    //         addToCart({
-    //             id: props.id,
-    //             title: props.Title,
-    //             price: props.Price,
-    //             image: props.src,
-    //             rating: props.Reting,
-    //         })
-    //     );
-    //     Navigate(`/Product_Display/${props.id}`); // 
-    // };
-    
-
     return (
         <div className='orderpagediv'>
             <div className="leftdiv">
@@ -65,6 +53,7 @@ const Product_Display = (props) => {
                 </div>
                 <div className="leftbtndiv">
                     <button className='btn1p Probtn' onClick={handleAddToCart}>ADD TO CART</button>
+                    <button className='btn1p Probtn'>ADD TO CART</button>
                     <button className='btn2p Probtn'>BUY NOW</button>
                 </div>
             </div>

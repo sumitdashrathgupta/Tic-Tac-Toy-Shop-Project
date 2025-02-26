@@ -13,6 +13,7 @@ const Main_Pages = () => {
                 <div className="card-index">
                     {Products_Item.map((item, i) => {
                         return <Products key={i + 1} id={item.id} src={item.Image} Title={item.Title2} Reting={<item.Reting />} Price={item.Price} />       
+                        return <Products key={i + 1} id={item.id} src={item.Image} Title={item.Title2} Reting={<item.Reting />} Price={item.Price} />
                     })}
                 </div>
             </main>
