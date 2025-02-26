@@ -64,7 +64,6 @@
 
 .rightdiv {
     /* background-color: aquamarine; */
-    width: 100%;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -155,7 +154,6 @@
 @media only screen and (max-width: 800px) {
     .orderpagediv {
         width: 80%;
-        height: 100%;
         margin: 15% auto;
         display: flex;
         align-items: start;
