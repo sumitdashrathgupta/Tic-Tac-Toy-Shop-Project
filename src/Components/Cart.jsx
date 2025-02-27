@@ -3,7 +3,7 @@ import Products_Item from '../assets/Products_Item';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { updateCartCount } from '../redux/Slice';
-import "../Style/Cart.css"
+import "../Style/Cart.css";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -17,24 +17,13 @@ const Cart = () => {
 
   useEffect(() => {
     if (Cartid && Products_Item[Cartid]) {
-      const selectedProduct = { ...Products_Item[Cartid], quantity: 1 };
+      const selectedProduct = { ...Products_Item[Cartid], quantity: 1, discount: 100 }; // Example discount
       setProducts((prevProducts) => {
         const existingProduct = prevProducts.find((item) => item.id === selectedProduct.id);
-
-        let updatedCart;
-        if (existingProduct) {
-          updatedCart = prevProducts.map((item) =>
-            item.id === selectedProduct.id
-              ? { ...item, quantity: item.quantity + 1 }
-              : item
-          );
-        } else {
-          updatedCart = [...prevProducts, selectedProduct];
-        }
+        if (existingProduct) return prevProducts;
+        const updatedCart = [...prevProducts, selectedProduct];
         localStorage.setItem('cart', JSON.stringify(updatedCart));
-
         dispatch(updateCartCount(updatedCart.length));
-
         return updatedCart;
       });
     }
@@ -43,7 +32,6 @@ const Cart = () => {
   const updateCart = (updatedProducts) => {
     setProducts(updatedProducts);
     localStorage.setItem('cart', JSON.stringify(updatedProducts));
-
     dispatch(updateCartCount(updatedProducts.length));
   };
 
@@ -70,13 +58,28 @@ const Cart = () => {
     updateCart(updatedProducts);
   };
 
+  // **Calculate Price Details**
+  const calculatePriceDetails = () => {
+    let totalPrice = 0;
+    let totalDiscount = 0;
+
+    products.forEach((item) => {
+      totalPrice += item.Price * item.quantity;
+      totalDiscount += (item.discount || 0) * item.quantity;
+    });
+
+    return { totalPrice, totalDiscount, finalAmount: totalPrice - 80 };
+  };
+
+  const { totalPrice, totalDiscount, finalAmount } = calculatePriceDetails();
+
   return (
     <div>
       {products.length === 0 ? (
         <p className='cart-empty'>Your cart is empty.</p>
       ) : (
-        products.map((item, index) => (
-          <div key={index} className="cart-item">
+        products.map((item) => (
+          <div key={item.id} className="cart-item">
             <img className='cart-img' src={item.Image} alt={item.Title} width="150" />
             <div className="cart-contenar">
               <h3 className='cart1-title'>{item.Title2}</h3>
@@ -93,6 +96,18 @@ const Cart = () => {
           </div>
         ))
       )}
+
+      <div className='cartTotaldiv'>
+        <h1>Price Details</h1>
+        <div className="price-details">
+          <p><strong>Price ({products.length} items):</strong> ₹{totalPrice}</p>
+          <p className="discount"><strong>Discount:</strong> - ₹{80}</p>
+          <p><strong>Delivery Charges:</strong> <span className="free">Free</span></p>
+          <hr />
+          <p className="total-amount"><strong>Total Amount:</strong> ₹{finalAmount}</p>
+          <button className="checkout-btn">PLACE ORDER</button>
+        </div>
+      </div>
     </div>
   );
 };
