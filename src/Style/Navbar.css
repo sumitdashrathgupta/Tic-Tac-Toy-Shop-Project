@@ -31,7 +31,7 @@ body {
 }
 
 .navbar {
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -65,8 +65,57 @@ body {
 }
 
 .input-search:hover {
-    outline: 0.1px solid rgba(128, 128, 128, 0.312);
+    outline: 0.1px solid rgba(161, 161, 161, 0.312);
 }
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-search {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.input-search:focus {
+    border-color: rgb(91, 91, 255);
+    box-shadow: 0 0 5px rgba(91, 91, 255, 0.5);
+}
+
+.searchBtn {
+    padding: 8px 14px;
+    background: rgb(91, 91, 255);
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.searchBtn:hover {
+    background: rgb(63, 63, 163);
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+    .search-container {
+        display: none;
+    }
+}
+
 
 .aside {
     display: flex;
@@ -76,7 +125,7 @@ body {
 }
 
 .card-icon {
-    font-size: 40px;
+    font-size: 30px;
     cursor: pointer;
 }
 
@@ -103,7 +152,7 @@ body {
     visibility: hidden;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
 
     .aside {
         display: none;
@@ -130,16 +179,24 @@ body {
         }
     }
 
+    .searchBtn{
+        display: none;
+    }
+
     .hamburgerBtn {
         visibility: visible;
         font-size: 21px;
         font-weight: 600;
     }
 }
-
 /* cart */
 .cartspan{
     position: relative;
+    color: rgb(255, 255, 255);
+    background-color: #ff0000;
+    font-size: 12px;
+    padding: 0px 5px;
+    border-radius: 50%;
     left: -47px;
     top: -21px;
 }
