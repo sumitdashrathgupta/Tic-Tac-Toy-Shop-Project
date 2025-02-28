@@ -51,11 +51,17 @@ const Navbar = (props) => {
             <img className="logo" src={Logo} alt="logo" />
             <h1>Tic Tac Toy</h1>
           </div>
-          <input
-            className="input-search"
-            type="search"
-            placeholder="Search the Toy"
-          />
+          <div className="search-container">
+            <label htmlFor="search"></label>
+            <input
+              className="input-search"
+              type="search"
+              placeholder="Search the Toy"
+            />
+            <button type="button" className="searchBtn">
+              Search
+            </button>
+          </div>
           <div className="aside">
             <FaShoppingCart className="card-icon" onClick={handleCartClick} />
             <span className="cartspan">{cartval}</span>
