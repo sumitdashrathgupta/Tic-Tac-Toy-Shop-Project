@@ -122,14 +122,14 @@
   border-radius: 8px;
   font-size: 16px;
   font-weight: bold;
-  background: linear-gradient(90deg, #ff3cac, #784ba0, #2b86c5);
+  background: rgb(91, 91, 255);
   color: white;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .login-form .login-btn:hover {
-  background: linear-gradient(90deg, #ff005e, #6a11cb, #2575fc);
+  background: rgb(91, 91, 255);
   transform: scale(1.05);
 }
 
@@ -144,13 +144,13 @@
 }
 
 .login-form b {
-  color: #ff4d6d;
+  color: #f15151;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .login-form b:hover {
-  color: #ff1e56;
+  color: #f23f3f;
 }
 .background-blur {
   z-index: 999;

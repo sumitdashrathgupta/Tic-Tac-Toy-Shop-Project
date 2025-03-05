@@ -1,5 +1,5 @@
 import React from "react";
-import Toyimage from '../assets/System Image/landing8-removebg-preview.png'
+import Toyimage from '../assets/System Image/toy.png'
 import "../Style/index.css"
 
 const Landing = () => {

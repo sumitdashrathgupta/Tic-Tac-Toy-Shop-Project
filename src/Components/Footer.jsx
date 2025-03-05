@@ -29,7 +29,6 @@ const Footer = () => {
                         <a href="">Shipping</a>
                         <a href="">Cancellation & Returns</a>
                         <a href="">Shipping</a>
-                        <a href="">FReport Infringement</a>
 
                     </div>
                     <div class="footer-card">

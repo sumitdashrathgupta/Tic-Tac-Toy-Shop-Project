@@ -175,3 +175,24 @@
   font-weight: bold;
   color: gray;
 }
+
+@media only screen and (max-width: 800px) {
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .cart-img{
+    margin-bottom: 20px;
+  }
+
+  .remove-button {
+    margin-top: 0px;
+  }
+
+  .cart-details p{
+    margin: 8px 0px;
+  }
+}
